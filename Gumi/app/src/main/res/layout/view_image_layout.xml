@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        app:theme="@style/ToolbarTheme"
+        app:titleTextColor="@color/colorWhite"
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorMain"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper2"
+        android:layout_width="match_parent"
+        android:layout_height="510dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+    </ViewFlipper>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/colorMain"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFlipper2">
+        <LinearLayout
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/btnPrevious"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                app:srcCompat="@mipmap/previous"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="112dp" />
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:text="Previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/btnNext"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                app:srcCompat="@mipmap/next"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="112dp" />
+            <TextView
+                android:layout_gravity="center"
+                android:textColor="@color/colorWhite"
+                android:text="Next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
